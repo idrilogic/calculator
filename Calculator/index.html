@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="center">
+            <form action="" name="form">
+                <div class="display">
+                    <input type="text" name="displayResult" class="inputValue" placeholder="0">
+                    <input type="button" name="displayResults" class="resultValue">
+                </div>
+    
+                <div class="buttons">
+                    <div class="row">
+                        <div class="clear" id="clear"><span>Clear</span></div>
+                    </div>
+    
+                    <div class="row">
+                        <input type="button" name="b7" value="7" onclick="calculate(b7.value)">
+                        <input type="button" name="b8" value="8" onclick="calculate(b8.value)">
+                        <input type="button" name="b9" value="9" onclick="calculate(b9.value)">
+                        <input type="button" name="addb" value="+" onclick="calculate(addb.value)">
+                    </div>
+    
+                    <div class="row">
+                        <input type="button" name="b4" value="4" onclick="calculate(b4.value)">
+                        <input type="button" name="b5" value="5" onclick="calculate(b5.value)">
+                        <input type="button" name="b6" value="6" onclick="calculate(b6.value)">
+                        <input type="button" name="subb" value="-" onclick="calculate(subb.value)">
+                    </div>
+    
+                    <div class="row">
+                        <input type="button" name="b1" value="1" onclick="calculate(b1.value)">
+                        <input type="button" name="b2" value="2" onclick="calculate(b2.value)">
+                        <input type="button" name="b3" value="3" onclick="calculate(b3.value)">
+                        <input type="button" name="multb" value="*" onclick="calculate(multb.value)">
+                    </div>
+    
+                    <div class="row">
+                        <input type="button" name="divb" value="/" onclick="calculate(divb.value)">
+                        <input type="button" name="b0" value="0" onclick="calculate(b0.value)">
+                        <input type="button" name="potb" value="." onclick="calculate(potb.value)">
+                        <input type="button" class="eq" value="=" onclick="displayResults.value = eval(displayResult.value)">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="button">
+        <div class="content">
+            <div class="border">
+                <h1>About</h1>
+                <p>Hey, peace be upon you guys all around the world.</p>
+                <p>I'm a developer, and designer...</p>
+                <p>Created by Muhammed El-Idrissi Laoukili. Find out more <a href="">about him</a>.
+                If you want to hire me to create for you such a beautiful website or a landing page 
+                to share documents with your workers, cow-workers, 
+                students even with your familly or just to store your data, conatct me in this 
+                email <i>idrilogic@gmail.com</i> or call me <b>Recommanded</b> 0767194500.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function calculate(result) {
+            form.displayResult.value = form.displayResult.value + result;
+        }
+
+        document.getElementById("clear").onclick = function() {
+            form.displayResult.value = "";
+            form.displayResults.value = "";
+        }
+    </script>
+</body>
+</html>
